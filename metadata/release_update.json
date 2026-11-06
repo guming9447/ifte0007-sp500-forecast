@@ -1,0 +1,24 @@
+{
+  "release": "v09",
+  "created_utc": "2026-11-06T17:18:41.536236+00:00",
+  "parent_zip_sha256": "aed0e71a02cbbf16ef6486a4027e46768b9870d49596296c9c723a415db2c6bf",
+  "changed_parent_files": [
+    "metadata/public_check_record.json",
+    "metadata/reproduction_validation.json",
+    "README.md"
+  ],
+  "added_files": [
+    "metadata/linux_public_check_record.json",
+    "metadata/release_update.json"
+  ],
+  "manifest_regenerated": true,
+  "executable_code_and_dependencies_unchanged": true,
+  "independent_record_sha256": "ef4dd125add215e5d769d54d703903e05f0354cd3adfc6e26aad72b42cf80b44",
+  "independent_code_hashes_match": true,
+  "linux_test_count": 157,
+  "linux_result_source": "Claude R-16 and attached run record, not a Codex Linux execution",
+  "exact_release_upload_approval_pending": true,
+  "repository": "https://github.com/guming9447/ifte0007-sp500-forecast",
+  "author_noreply_address_pending": true,
+  "final_forecast_pending": true
+}

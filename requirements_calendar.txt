@@ -1,0 +1,8 @@
+# Optional regeneration only; use a separate environment. Bundled replay needs neither this nor a generator.
+exchange_calendars==4.13.2
+pandas==3.1.1
+numpy==2.5.4
+tzdata==2026.6
+pyluach==2.3.0
+toolz==1.2.0
+python-dateutil==4.0.0

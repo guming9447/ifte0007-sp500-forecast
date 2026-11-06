@@ -1,0 +1,43 @@
+{
+  "provenance_sha256": "ea8ca7ac8b7f22b09131e4150deba0d293991e9de45ffe8813adb13584597dfb",
+  "model": "M1",
+  "selected_on_historical_evidence": true,
+  "selection_n": 310,
+  "later_n": 52,
+  "selection": {
+    "M0": {
+      "n": 310,
+      "mean_score": 39.99264516129032,
+      "mean_delta": 0.0,
+      "wins": 0,
+      "losses": 0,
+      "ties": 310
+    },
+    "M1": {
+      "n": 310,
+      "mean_score": 40.254999999999995,
+      "mean_delta": 0.2623548387096774,
+      "wins": 187,
+      "losses": 120,
+      "ties": 3
+    }
+  },
+  "previously_seen_later_period": {
+    "M0": {
+      "n": 52,
+      "mean_score": 42.091153846153844,
+      "mean_delta": 0.0,
+      "wins": 0,
+      "losses": 0,
+      "ties": 52
+    },
+    "M1": {
+      "n": 52,
+      "mean_score": 42.26634615384615,
+      "mean_delta": 0.17519230769230767,
+      "wins": 31,
+      "losses": 21,
+      "ties": 0
+    }
+  }
+}

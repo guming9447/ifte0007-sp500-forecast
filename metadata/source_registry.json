@@ -1,0 +1,95 @@
+{
+  "entries": [
+    {
+      "id": "vix_primary",
+      "relative_path": "02_data/raw/2026-10-23_SP500_factor_feasibility_v02/VIXCLS_fred_original.csv",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS&cosd=1900-01-01",
+      "sha256": "c998f6faeb5a203dc65c02a70cb4f0e8955c258b4c92cd719f2ba9899137e90d",
+      "retrieved_at_recorded": "2026-10-23T01:39:55.611761+00:00",
+      "http_status": 200,
+      "downloadable": true,
+      "source_kind": "HTTP entity-body snapshot",
+      "historical_role": "primary research input",
+      "publication_policy": "NO_RAW_REDISTRIBUTION"
+    },
+    {
+      "id": "es60m_primary",
+      "relative_path": "02_data/raw/2026-10-23_SP500_factor_feasibility_v03/ES_yahoo_60m_729d_original.json",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ES%3DF?period1=1729734077&period2=1792719677&interval=60m&includePrePost=true",
+      "sha256": "a5a64ad408a38ff785d4839b5053a93d9a347a5a63b5a37476fb01788c69b959",
+      "retrieved_at_recorded": "2026-10-23T01:41:17.720239+00:00",
+      "http_status": 200,
+      "downloadable": true,
+      "source_kind": "HTTP entity-body snapshot",
+      "historical_role": "primary research input",
+      "publication_policy": "NO_RAW_REDISTRIBUTION"
+    },
+    {
+      "id": "ndx_primary",
+      "relative_path": "02_data/raw/2026-10-23_SP500_NDX_benchmark_v02/NASDAQ100_fred_original.csv",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=NASDAQ100&cosd=1900-01-01",
+      "sha256": "fd185da7375c1d0bd8cae7259187c5cd17d7336d1d2f576759fdd047a83fb3e1",
+      "retrieved_at_recorded": "2026-10-22T23:09:33.665332+00:00",
+      "http_status": 200,
+      "downloadable": true,
+      "source_kind": "HTTP entity-body snapshot",
+      "historical_role": "primary research input",
+      "publication_policy": "NO_RAW_REDISTRIBUTION"
+    },
+    {
+      "id": "sp500_primary",
+      "relative_path": "02_data/raw/2026-10-23_SP500_NDX_benchmark_v02/SP500_fred_original.csv",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=SP500&cosd=1900-01-01",
+      "sha256": "e9bcd388470935a8131bc8101271205f83ee953aecc527822e64365669b38cc2",
+      "retrieved_at_recorded": "2026-10-22T23:09:33.532181+00:00",
+      "http_status": 200,
+      "downloadable": true,
+      "source_kind": "HTTP entity-body snapshot",
+      "historical_role": "primary research input",
+      "publication_policy": "NO_RAW_REDISTRIBUTION"
+    },
+    {
+      "id": "vxv_primary",
+      "relative_path": "02_data/raw/2026-10-25_SP500_round2_data_gate_v02/VXVCLS_fred_original.csv",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VXVCLS&cosd=1900-01-01",
+      "sha256": "096fe38107b5f2faac0ccf105d6ebaf56eff84432ac0799aa168a9ebd97d39e9",
+      "retrieved_at_recorded": "2026-10-25T00:43:56.195828+00:00",
+      "http_status": 200,
+      "downloadable": true,
+      "source_kind": "HTTP entity-body snapshot",
+      "historical_role": "primary research input",
+      "publication_policy": "NO_RAW_REDISTRIBUTION"
+    },
+    {
+      "id": "calendar",
+      "relative_path": "02_data/processed/2026-10-23_SP500_NDX_benchmark_v02/session_calendar.csv",
+      "sha256": "a2197c758f732d484c5d4d062d998b752a8363fde40c0a7cf81421caad47bb82",
+      "url": null,
+      "downloadable": false,
+      "source_kind": "generated calendar metadata, exchange_calendars4.13.2",
+      "historical_role": "primary session-calendar input",
+      "bundled_metadata": "metadata/session_calendar.csv",
+      "publication_policy": "BUNDLED_CALENDAR_METADATA"
+    }
+  ],
+  "exact_version_not_guaranteed_on_redownload": true,
+  "deployment_sources": {
+    "SP500": {
+      "url": "https://www.spglobal.com/spdji/en/indices/equity/sp-500/",
+      "method": "Manual export, USD, Price Return, ten-year daily interval; retain original and capture evidence",
+      "official_start": "2016-10-31",
+      "fixed_frozen_FRED_prefix": [
+        "2016-10-24",
+        "2016-10-28"
+      ],
+      "policy": "D031_D032_OPTION2",
+      "raw_redistribution": false
+    },
+    "VIX_P0": {
+      "url": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+      "historical_source": "FRED VIXCLS",
+      "raw_redistribution": false
+    }
+  },
+  "warning": "Same-version availability requires evidence; observation dates and file hashes alone do not establish it."
+}

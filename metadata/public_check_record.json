@@ -1,0 +1,99 @@
+{
+  "created_utc": "2026-11-06T16:38:49.300122+00:00",
+  "python": "3.14.6",
+  "platform": "Windows",
+  "network_used": false,
+  "commands": [
+    {
+      "command": [
+        "python",
+        "-B",
+        "scripts/test_storage_policy.py"
+      ],
+      "exit_code": 0,
+      "log_sha256": "6771e7b2974b9be8b90af0ab13ceaf47d9df272734fab69606432c59e460d50a"
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "scripts/test_finalday_tools.py",
+        "--synthetic-only",
+        "--output",
+        "<OUTPUT>\\core_tests"
+      ],
+      "exit_code": 0,
+      "log_sha256": "ab32e41f5bea394a3e553323e65862840c26f8b4570ce73ea8e797262051b5a5"
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "scripts/test_source_controls.py",
+        "--output",
+        "<OUTPUT>\\control_tests"
+      ],
+      "exit_code": 0,
+      "log_sha256": "78c166059b407b75c9f54195b8a1680fae140b55506d08b10682ebbf98bff3a7"
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "independent/tests/test_synthetic.py"
+      ],
+      "exit_code": 0,
+      "log_sha256": "9ce1dfed8c60b8e1c3d8c6fd8cb33044ea59a6dd13a589296dd59a0cb706a8ef"
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "independent/tests/test_round2_synthetic.py"
+      ],
+      "exit_code": 0,
+      "log_sha256": "f33a911a7e829479bb8fb1e696b71b8d35bdbdbbc765d97130217e2f34c8d887"
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "independent/tests/test_final_v2_source_control.py"
+      ],
+      "exit_code": 0,
+      "log_sha256": "eb4cb32585ffb0c0c834730b788ee26391f372b81512821a381f4ac27dd4c2db"
+    }
+  ],
+  "synthetic_demo": {
+    "status": "SYNTHETIC_NOT_A_SUBMISSION_FORECAST",
+    "origin": "2026-10-09",
+    "forecast_2dp": "124.86",
+    "forecast_full_precision": 124.85790138631205,
+    "n_train": 260,
+    "invented_input_sha256": "48581366855ea705c7a5bdf13c2957c5140a60951a5b719206f2685a8259d533",
+    "calendar_sha256": "73c47a1f02bd3ccdf1c755f56a4c5cbc4b124fb463efbbc491f751a4dcaa084c"
+  },
+  "code_sha256": {
+    "independent/rep_core.py": "8efd6aca838561a76c15e44d737cc773b3b675717c1c8beac924c2875368aabe",
+    "independent/rep_final.py": "2450997083be4cd398430b980dad2817ef4417cf825605e9d7f7f7a1ebfc3111",
+    "independent/rep_round2.py": "c4c95a6275c664ca0ad2a60d30357a601038b5faf5a13cd4f6fbb734dfa66d8e",
+    "independent/tests/test_final_v2_source_control.py": "86a287ded03fbe2e7a47074fdb1f94f084ba2d5e107b16ea44e724956ed23c4e",
+    "independent/tests/test_round2_synthetic.py": "e3474e259d845683c3ac7ffce5140dad278d34a838d02db6b03450dd37e3a211",
+    "independent/tests/test_synthetic.py": "16e2a2e5bf3a0cef6d42232afabe779f8e1d0f27a8312e4a10908dc535ec92ae",
+    "scripts/backtest_method_v04.py": "ac836b86829663e4994d5aca8d8799b241dc3db5400d9bcb13e48ca87e20d7cc",
+    "scripts/backtest_method_v05.py": "2167144ab63dea805286732bf6b156bb1d5906c7ef325cce5c05d161fbf61f41",
+    "scripts/capture_source.py": "bbd24f24e02985ecdd0c94d143024f000753df8293c48574327cd3871a070426",
+    "scripts/convert_official_inputs.py": "281e4ab46e7e110c7617d8234723fc043e877c0874c873a909c34d1d8b86d14e",
+    "scripts/download_evidence_inputs.py": "fcf22d62b445e0a0652437df8cd05603316e0588f5a828adb9988be5b57b6014",
+    "scripts/extend_final_calendar.py": "535c7e793c884dcbca95633d54e16de5542e50bfeaa4fd8c0701db2c21af73e7",
+    "scripts/final_day_pipeline.py": "f65134252f8b54f227522bb1bfab93e82ca0816a9b7bbb0c96015608b17fe118",
+    "scripts/m1_forecast.py": "38a75c6fad3650c109bdf0ca582144b1ebf03a27184d49158cd784cc1ba2f1da",
+    "scripts/reproduce_research.py": "6ae33622d6386db27d8cdfaae808816afaff65129d8ca72e1b88c52a22aab987",
+    "scripts/run_public_checks.py": "fed3133dfca72eac739746a17bc22c0f41ad1a95e778f71386e25a6a86ef7d61",
+    "scripts/storage_policy.py": "79de53644cb66ab94c060235761d9896bf64d1325da24ac7c786ba5effadff71",
+    "scripts/test_finalday_tools.py": "2f48db8a0902259cb300a627c5ae0c8a1efcc6ea3b8b517136b92e43c7786cc2",
+    "scripts/test_source_controls.py": "c4ecb69c063ec513b3e1f26e6e13508e47dc0c425baf64424a2e1f0b2dc3c604",
+    "scripts/test_storage_policy.py": "7fa0fab5b524a8c1531970ed51ce46ed4c232e211bb42f71d29f9da9246350a7"
+  },
+  "scope_note": "Public synthetic examples only. Logs retained privately; their hashes identify actual runs. R was a temporary mapping backed by E; Windows resolve() canonicalised it to E. This is NOT a test on a Windows machine without E. Pure validation tests exercise public D-drive, Linux and macOS paths and the opt-in student guard. Subsequently Claude ran v08 on Linux Python 3.13.16 without E: all 157 checks passed. See linux_public_check_record.json. Its code hashes match v09; the Windows alias caveat above still applies."
+}

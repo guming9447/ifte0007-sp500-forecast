@@ -1,0 +1,15 @@
+{
+  "role": "Pre-rehearsal source audit, not the final November 13 inputs",
+  "source_url": "https://www.spglobal.com/spdji/en/indices/equity/sp-500/",
+  "field": "USD Price Return",
+  "first_session": "2016-10-31",
+  "last_session": "2026-11-05",
+  "original_xls_sha256": "65247c90d36eda1edea40029e0e3b41597b05dbe7bafd2c4bffcb039068e1220",
+  "normalised_csv_sha256": "266dd2b53d4e0c32ee00178c578fa1af4867712d701a1910042cd65dda7ca85f",
+  "conversion_command": "python -B scripts/convert_official_inputs.py --help",
+  "frozen_prefix_sessions": 5,
+  "official_sessions": 2518,
+  "frozen_overlap_exact_sessions": 2507,
+  "availability_warning": "Consistency and file identity do not establish pre-cutoff publication",
+  "raw_files_included": false
+}

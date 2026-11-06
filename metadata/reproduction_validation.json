@@ -1,0 +1,67 @@
+{
+  "verification_sha256": "8080a1145be311679649b53113a3d62eb3acd3c9c003892273c48e860ef8c34d",
+  "research_comparisons": [
+    {
+      "label": "v04",
+      "sample": "selection",
+      "origins": 310,
+      "model_cells": 1860,
+      "exact": true
+    },
+    {
+      "label": "v04",
+      "sample": "previously_seen_later_period",
+      "origins": 52,
+      "model_cells": 364,
+      "exact": true
+    },
+    {
+      "label": "A1",
+      "sample": "selection",
+      "origins": 310,
+      "model_cells": 1860,
+      "exact": true
+    },
+    {
+      "label": "A1",
+      "sample": "previously_seen_later_period",
+      "origins": 52,
+      "model_cells": 364,
+      "exact": true
+    },
+    {
+      "label": "round2",
+      "sample": "selection",
+      "origins": 310,
+      "model_cells": 2170,
+      "exact": true
+    },
+    {
+      "label": "round2",
+      "sample": "previously_seen_later_period",
+      "origins": 52,
+      "model_cells": 364,
+      "exact": true
+    }
+  ],
+  "exact_model_cells": 6982,
+  "input_data_distributed": false,
+  "separately_held_frozen_inputs_used": true,
+  "real_source_rehearsal_completed": false,
+  "final_prediction_completed": false,
+  "test_counts": {
+    "storage": 7,
+    "core": 19,
+    "source_controls": 45,
+    "independent_core": 36,
+    "independent_round2": 15,
+    "independent_final": 35
+  },
+  "all_tests_passed": true,
+  "runtime": {
+    "python": "3.14.6",
+    "tzdata": "2026.2",
+    "platform": "Windows"
+  },
+  "portability_limit": "Public synthetic examples only. Logs retained privately; their hashes identify actual runs. R was a temporary mapping backed by E; Windows resolve() canonicalised it to E. This is NOT a test on a Windows machine without E. Pure validation tests exercise public D-drive, Linux and macOS paths and the opt-in student guard. Subsequently Claude ran v08 on Linux Python 3.13.16 without E: all 157 checks passed. See linux_public_check_record.json. Its code hashes match v09; the Windows alias caveat above still applies."
+}
