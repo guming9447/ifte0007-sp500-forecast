@@ -1,5 +1,33 @@
 # S&P 500 forecasting evidence
 
+## Download the single evidence ZIP
+
+[Download the saved-input evidence package](https://github.com/guming9447/ifte0007-sp500-forecast/raw/refs/heads/main/evidence/IFTE0007_Evidence_Package_Saved_Inputs_2026-11-13.zip)
+(61 files, 344,436 bytes; [SHA-256](evidence/IFTE0007_Evidence_Package_Saved_Inputs_2026-11-13.zip.sha256)).
+
+This student-approved packaging supplement was prepared on 13 November after
+the information cutoff. It adds explicitly labelled, saved synthetic inputs,
+expected results and a self-contained offline replay; it does not change the
+real data, frozen model, approved forecast or report. The original
+`submission-2026-11-13` tag is unchanged. Use this ZIP for the complete evidence
+package rather than the earlier tagged archive, which lacks saved sample inputs.
+
+Extract the ZIP and follow its root README. With an existing Python interpreter:
+
+```text
+python -I -S -B scripts/reproduce_saved_sample.py --output ../saved_sample_check_01
+```
+
+No student account, live AI, network or pip installation is needed for this
+command. The bundled timezone data includes licence notices. The sample result
+125.21 is invented, not another submission forecast; the real approved value is
+7,606.95. Under the brief's restricted-data exception, the saved sample replaces
+non-redistributable real inputs. It reproduces the calculation on the sample,
+not the real market result. Exact real-data replay still needs lawfully held
+matching real inputs. The ZIP's `EVIDENCE_REQUIREMENTS.md` maps all required items.
+
+## Final forecast and original records
+
 The student-approved final forecast is **7,606.95 index points**, for the official
 S&P 500 price-index close on 20 November 2026 at 16:00 EST / 21:00 GMT (UTC).
 The information cutoff is 13 November 2026 at 12:00 GMT (UTC).
@@ -163,7 +191,9 @@ These enable computational inspection; they do not grant data redistribution
 rights or guarantee a vendor still serves the historical version. Exact market
 result reproduction requires lawful access to the matching frozen inputs.
 Do not upload private source-control files, source levels, run folders or original
-chat exports. `metadata/package_manifest.json` inventories the current allowlist.
+chat exports. `metadata/package_manifest.json` inventories the original tagged
+45-file allowlist, not this later README/ZIP supplement. The ZIP contains its own
+complete `metadata/evidence_package_manifest.json`; its external SHA-256 is above.
 The foundation's `metadata/release_update.json` and older validation records are
 historical; `metadata/final_release.json` describes this update. The planned tag
 is `submission-2026-11-13`, created only after approval and publication. Verify
