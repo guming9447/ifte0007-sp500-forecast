@@ -183,6 +183,17 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(r["target"],"2026-11-13")
         self.assertEqual(r["default"]["n_train"],260)
 
+    def test_omit_scenarios_does_not_change_forecast(self):
+        self.lock()
+        f.calculate(self.root/"locked", self.root/"with_scenarios")
+        with patch.object(m1, "scenarios", side_effect=AssertionError("Scenario calculation must not run")):
+            f.calculate(self.root/"locked", self.root/"without_scenarios", include_scenarios=False)
+        a = json.loads((self.root/"with_scenarios/candidate.json").read_text())
+        b = json.loads((self.root/"without_scenarios/candidate.json").read_text())
+        self.assertIsNone(b.pop("scenario_scores"))
+        self.assertIsNotNone(a.pop("scenario_scores"))
+        self.assertEqual(a, b)
+
     def test_missing_current_vix_fallback(self):
         self.cfg["inputs"].pop("vix_official"); self.cfg["availability"].pop("vix_official")
         self.cfg["missing_current_vix_reason"]="SYNTHETIC unavailable"

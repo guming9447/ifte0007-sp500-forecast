@@ -309,7 +309,7 @@ def training_hash(dates):
     return hashlib.sha256(",".join(str(d) for d in dates).encode("utf-8")).hexdigest()
 
 
-def calculate(folder, output):
+def calculate(folder, output, include_scenarios=True):
     ensure_e(output)
     if output.exists():
         raise FileExistsError("Candidate output must be new")
@@ -329,7 +329,8 @@ def calculate(folder, output):
         "input_hashes": {n: manifest["files"][n] for n in ("SP500.csv", "VIXCLS.csv", "session_calendar.csv")},
         "code_hashes": {p.name: m1.sha(p) for p in (Path(__file__), Path(m1.__file__))},
         **current, "default": default, "train_origins_sha256": training_hash(default["train_origins"]),
-        "report_only": estimates, "scenario_scores": m1.scenarios(current["P0"], default["forecast_full_precision"])})
+        "report_only": estimates,
+        "scenario_scores": m1.scenarios(current["P0"], default["forecast_full_precision"]) if include_scenarios else None})
     print("CANDIDATE_ONLY " + default["forecast_2dp"] + " OUTPUT=" + str(output))
 
 
@@ -366,12 +367,13 @@ if __name__ == "__main__":
     p = sub.add_parser("calculate")
     p.add_argument("--inputs", type=Path, required=True)
     p.add_argument("--output", type=Path, required=True)
+    p.add_argument("--omit-scenarios", action="store_true", help="Keep the separately approved historical scenario example unchanged")
     args = parser.parse_args()
     try:
         if args.command == "lock":
             lock(args.config.resolve(), args.output.resolve())
         elif args.command == "calculate":
-            calculate(args.inputs.resolve(), args.output.resolve())
+            calculate(args.inputs.resolve(), args.output.resolve(), include_scenarios=not args.omit_scenarios)
         else:
             ensure_e(args.output)
             checks = compare(json.loads(args.candidate.read_text()), json.loads(args.claude.read_text()))

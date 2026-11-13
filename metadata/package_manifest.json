@@ -1,9 +1,6 @@
 {
-  "created_utc": "2026-11-06T17:18:41.575843+00:00",
-  "status": "LOCAL_ALLOWLIST_NOT_PUBLICATION_APPROVAL",
-  "no_git_actions": true,
-  "automated_privacy_scan_findings": [],
-  "manual_review_still_required": true,
+  "created_utc": "2026-11-13T04:28:15.819204+00:00",
+  "snapshot_type": "FINAL_UPDATE_ALLOWLIST_PREPARED_FOR_STUDENT_REVIEW",
   "files": [
     {
       "path": ".gitignore",
@@ -14,8 +11,12 @@
       "sha256": "f1675d5f23e99f6cb42ec9e3ace69de501846863ee1cdbbb56d90513df7f1f61"
     },
     {
-      "path": "FINAL_FORECAST_PENDING.md",
-      "sha256": "5a6657c776235cd70f18aa117ee6c3b35fbc6997690cb26730e38f33dd5d227d"
+      "path": "FINAL_FORECAST.json",
+      "sha256": "43a967b29f5b71c2d8e2368ffb64b03d79acca7d087679a31489060af873cce3"
+    },
+    {
+      "path": "FINAL_RUN_TRANSCRIPT.md",
+      "sha256": "ca4e6e14d29d2f332f5b2a64fa1b7250019b056c155c06c8e55ca1c030c46165"
     },
     {
       "path": "independent/rep_core.py",
@@ -50,8 +51,20 @@
       "sha256": "09930bd53c57f87af2ee700f542b15c9c4767acfb3b3218bc27f4f74ee6048bf"
     },
     {
+      "path": "metadata/final_public_check_record.json",
+      "sha256": "ab360d5de9e98753728f3c466b6fff337c19df82763e6ad97376d3fecc7d93dd"
+    },
+    {
+      "path": "metadata/final_release.json",
+      "sha256": "59d8f0165548b824d3f24f9fda94645d00fc0347c6c94e84d317a1467b203eb0"
+    },
+    {
       "path": "metadata/final_session_calendar.csv",
       "sha256": "73c47a1f02bd3ccdf1c755f56a4c5cbc4b124fb463efbbc491f751a4dcaa084c"
+    },
+    {
+      "path": "metadata/final_source_registry.json",
+      "sha256": "dd2e00032e6c3eda0809e711d3c35d156a926b0ec036bea3905e64cdb7fd0074"
     },
     {
       "path": "metadata/independent_code_manifest.json",
@@ -91,7 +104,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "080a1ce986485f5be867e94734153a35d1e28ec179499ca04cf41f3fbcb7edaf"
+      "sha256": "3f6a02bdd4b7073c9b49d2b29969cf9fe8158b2e6c412fe6d400cf8edbc4aaee"
     },
     {
       "path": "requirements.txt",
@@ -131,7 +144,7 @@
     },
     {
       "path": "scripts/final_day_pipeline.py",
-      "sha256": "f65134252f8b54f227522bb1bfab93e82ca0816a9b7bbb0c96015608b17fe118"
+      "sha256": "518d552e92bd630bac807ca11b04a56613c1032f36dff2a0280d2db2b72f3e0b"
     },
     {
       "path": "scripts/m1_forecast.py",
@@ -159,11 +172,33 @@
     },
     {
       "path": "scripts/test_source_controls.py",
-      "sha256": "c4ecb69c063ec513b3e1f26e6e13508e47dc0c425baf64424a2e1f0b2dc3c604"
+      "sha256": "c5fb8a184c38e0a8d92ffb4623c71a1918f6bab9821d22cf79d2b1dbffd4a760"
     },
     {
       "path": "scripts/test_storage_policy.py",
       "sha256": "7fa0fab5b524a8c1531970ed51ce46ed4c232e211bb42f71d29f9da9246350a7"
     }
-  ]
+  ],
+  "automated_privacy_scan_findings": [],
+  "synthetic_tests_total": 158,
+  "changes_from_published_v09": {
+    "added": [
+      "FINAL_FORECAST.json",
+      "FINAL_RUN_TRANSCRIPT.md",
+      "metadata/final_public_check_record.json",
+      "metadata/final_release.json",
+      "metadata/final_source_registry.json"
+    ],
+    "modified": [
+      "README.md",
+      "metadata/package_manifest.json",
+      "scripts/final_day_pipeline.py",
+      "scripts/test_source_controls.py"
+    ],
+    "removed": [
+      "FINAL_FORECAST_PENDING.md"
+    ]
+  },
+  "planned_tag": "submission-2026-11-13",
+  "no_commit_push_or_tag_performed": true
 }

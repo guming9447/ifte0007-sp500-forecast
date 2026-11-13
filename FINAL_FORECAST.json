@@ -1,0 +1,40 @@
+{
+  "record_type": "STUDENT_APPROVED_FINAL_POINT_FORECAST",
+  "market": "S&P 500 price index",
+  "unit": "index points",
+  "forecast_value_2dp": "7606.95",
+  "reference": "S&P Dow Jones Indices official closing price-index level; USD Price Return",
+  "target_date": "2026-11-20",
+  "target_new_york": "2026-11-20T16:00:00-05:00",
+  "target_london_utc": "2026-11-20T21:00:00Z",
+  "information_cutoff_london_utc": "2026-11-13T12:00:00Z",
+  "model": "M1 historical comparable-horizon log-price drift",
+  "window": 260,
+  "minimum_eligible_mature_labels": 156,
+  "training_date_set_sha256": "0c76a892ba37f7ab9995b03ab91cfe364d994c860a3135e0afa20df4036b2ad8",
+  "input_hashes": {
+    "SP500.csv": "a65cd7f04d79bc9980ec130e51ca93b83253a5ddaa44d8e8a47be96981ee4e57",
+    "VIXCLS.csv": "3a9ee1a7d35bffe7cd0a6a382d1fc353b43cd8a823e13455895109029072547d",
+    "session_calendar.csv": "73c47a1f02bd3ccdf1c755f56a4c5cbc4b124fb463efbbc491f751a4dcaa084c"
+  },
+  "lock_manifest_sha256": "387e46bba19d3fc038f64272277377ace247c81ed1ad48db482c75ac1183f4b0",
+  "private_candidate_sha256": "0d892cb45ec41f79fed4c7dd1f34fe666f08c177882a201780e0d051087897c6",
+  "code_hashes": {
+    "final_day_pipeline.py": "518d552e92bd630bac807ca11b04a56613c1032f36dff2a0280d2db2b72f3e0b",
+    "m1_forecast.py": "38a75c6fad3650c109bdf0ca582144b1ebf03a27184d49158cd784cc1ba2f1da"
+  },
+  "independent_check": {
+    "canonical_and_raw_source_modes_match": true,
+    "forecast_full_precision_difference": 0,
+    "mu_absolute_difference": 2.168404344971009e-19,
+    "codex_verification_checks": 33
+  },
+  "student_approval": {
+    "approved": true,
+    "approved_at_london_utc": "2026-11-13T04:14:00Z",
+    "basis": "Student-transmitted approval after independent reconciliation; private approval record retained."
+  },
+  "omissions": "Source index levels, VIX levels, fitted return parameters and raw observations remain private under the approved publication policy.",
+  "historical_availability": "Research historical first-release times were assumed, not individually verified.",
+  "submission_status": "Forecast approved; repository publication and Moodle submission are separate actions."
+}

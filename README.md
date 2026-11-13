@@ -1,8 +1,15 @@
-# Forecasting evidence: local publication candidate
+# S&P 500 forecasting evidence
 
-This package has NOT been uploaded. Publication requires the student's review.
-No raw market observations, per-origin returns, personal details, correspondence,
-credentials or formal forecast are bundled. The tests generate invented values.
+The student-approved final forecast is **7,606.95 index points**, for the official
+S&P 500 price-index close on 20 November 2026 at 16:00 EST / 21:00 GMT (UTC).
+The information cutoff is 13 November 2026 at 12:00 GMT (UTC).
+See `FINAL_FORECAST.json`, `metadata/final_source_registry.json` and
+`FINAL_RUN_TRANSCRIPT.md` for the approval, source versions and checks.
+The final forecast is approved; permission to publish is recorded separately.
+Publication of this repository does not establish Moodle/Turnitin submission.
+No raw market observations, per-origin returns, personal details, correspondence
+or credentials are bundled. Source levels and fitted returns remain private.
+The tests generate invented values, not alternative submission forecasts.
 
 ## Reproduction scope
 
@@ -21,8 +28,11 @@ credentials or formal forecast are bundled. The tests generate invented values.
 Python 3.14.6 on Windows was tested locally. Claude independently ran the exact
 v08 package on Linux with Python 3.13.16, no E drive and the student storage
 flag unset: all 157 synthetic checks passed. The attached Linux record's code
-hashes match this v09 release candidate: only documentation and validation
-metadata changed since v08, not executable code or dependencies. See
+hashes match the November6 v09 foundation: only documentation and validation
+metadata changed then. That Linux result is not a test of the final-day update.
+The final update adds an optional scenario-output omission switch and one test;
+the estimator and dependencies are unchanged. See the final Windows validation
+record separately. Historical foundation records remain in
 `metadata/linux_public_check_record.json` and `metadata/release_update.json`.
 Core scripts use the standard
 library plus IANA timezone data (`tzdata==2026.2` on Windows). The calendar CSV is
@@ -102,8 +112,11 @@ Data -> source and time checks -> immutable lock -> M1 candidate -> independent
 raw-source and canonical-input recomputations -> student approval -> submission.
 Errors lead to investigation, not automatic substitution or changed thresholds.
 
-The formal pipeline is implemented but requires real-source rehearsal and
-human evidence review. An observation date alone is not availability proof.
+The November13 formal inputs were source-reviewed, locked and calculated.
+Independent canonical-input and raw-source computations agreed, and the student
+approved the forecast at 04:14 GMT. The earlier November10 exercise was only a
+technical rehearsal: its historical availability was not certified.
+An observation date alone is not availability proof.
 Final cutoff is 2026-11-13 12:00 London, target 2026-11-20 NY close. Later retrieval
 is acceptable only with evidence that the same used version was public before
 the cutoff. D-031 option 2, approved 6 November: deployment SP500 inputs from
@@ -141,17 +154,31 @@ copy an approval between interfaces without translating and checking fields.
 
 ## Public-release boundary
 
-This is a technical evidence candidate, not the complete assessment submission.
+This repository contains code and supporting evidence; the report is submitted
+separately through Moodle/Turnitin. Slides are prepared for the presentation and
+are not required as a submission upload under the updated course notice.
 Under the coursework data-sharing guidance, restricted observations are replaced
 with source links, acquisition instructions, hashes and invented examples.
 These enable computational inspection; they do not grant data redistribution
 rights or guarantee a vendor still serves the historical version. Exact market
 result reproduction requires lawful access to the matching frozen inputs.
-The report, six-slide presentation, final value, student-confirmed declarations,
-sanitised instruction/decision extracts and repository URL must be finalised
-separately. Do not upload private source-control files, run folders or original
-chat exports. `metadata/package_manifest.json` inventories only this allowlist.
-Create a fresh repository from the approved allowlist, without private Git
-history. After separately authorised upload, verify access while logged out and
-tag the approved submission version. None of those publication actions is
-performed by these scripts. `FINAL_FORECAST_PENDING.md` is deliberately pending.
+Do not upload private source-control files, source levels, run folders or original
+chat exports. `metadata/package_manifest.json` inventories the current allowlist.
+The foundation's `metadata/release_update.json` and older validation records are
+historical; `metadata/final_release.json` describes this update. The planned tag
+is `submission-2026-11-13`, created only after approval and publication. Verify
+anonymous access and the exact tag commit, then keep the submitted tag fixed.
+
+## Formal calculation with privately held matching inputs
+
+The public files do not include restricted inputs or private source-control
+attestations. With the exact separately held locked directory, run:
+
+```powershell
+python -B scripts/final_day_pipeline.py calculate --inputs ../private_forecast/locked_inputs --output ../private_forecast/final_replay --omit-scenarios
+```
+
+The output is a candidate record, not a new approval or an automatic submission.
+`--omit-scenarios` suppresses an unused supplementary table only. It does not
+change the deployed estimate, training membership or report-only sensitivities.
+The report retains its labelled 9 October historical scenario example.

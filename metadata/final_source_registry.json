@@ -1,0 +1,63 @@
+{
+  "sources": [
+    {
+      "role": "sp_official",
+      "url": "https://www.spglobal.com/spdji/en/indices/equity/sp-500/",
+      "retrieved_or_received_utc": "2026-11-13T03:21:39.969234+00:00",
+      "timestamp_type": "Actual receipt of student-downloaded bytes; conservative latest-known availability bound",
+      "raw_sha256": "c366449b3223929fb2af3252e10edd9d27eac89898245dba4701937321a818c8",
+      "normalised_sha256": "69d824f0aa53a1dc7ea115a200736451f07a9f44510b9d14c42e52e69d0ed9a3",
+      "last_used_observation": "2026-11-12",
+      "availability_evidence": "Version-linked receipt and source checks retained privately; received before information cutoff. Source values and screenshots withheld.",
+      "availability_evidence_sha256": "09539bb7a84ab1f0e81bb963a618fe4e7a9486848e0ce022f945920634df3e37"
+    },
+    {
+      "role": "vix_history",
+      "url": "https://fred.stlouisfed.org/series/VIXCLS",
+      "retrieved_or_received_utc": "2026-11-13T03:21:39.979055+00:00",
+      "timestamp_type": "Actual receipt of student-downloaded bytes; conservative latest-known availability bound",
+      "raw_sha256": "c7c111ba59acbab48f6c215d1912b1826ccf2d9da51762a72d8246dbb9d0f413",
+      "normalised_sha256": "c7c111ba59acbab48f6c215d1912b1826ccf2d9da51762a72d8246dbb9d0f413",
+      "last_used_observation": "2026-11-11",
+      "availability_evidence": "Version-linked receipt and source checks retained privately; received before information cutoff. Source values and screenshots withheld.",
+      "availability_evidence_sha256": "356bf8c16c475afad9ba18d29de8ecd671b4c50bf2f3e56e9905195136cffc2b"
+    },
+    {
+      "role": "vix_official",
+      "url": "https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv",
+      "retrieved_or_received_utc": "2026-11-13T03:15:39.338847+00:00",
+      "timestamp_type": "HTTPS acquisition",
+      "raw_sha256": "2a21208b9e9f61ad60e4d6b028bb9afc85483e4b0b94b69d2f0b1922dfd96820",
+      "normalised_sha256": "2a3dce1ac81782a3c957861e57d137b1faefa98089b2e3ffbe345da59fadc818",
+      "last_used_observation": "2026-11-12",
+      "availability_evidence": "Version-linked receipt and source checks retained privately; received before information cutoff. Source values and screenshots withheld.",
+      "availability_evidence_sha256": "f826d0567b869928e8c02694851f0fccd3935d5e431266dcba48461dbe1349a8"
+    },
+    {
+      "role": "frozen_sp_prefix",
+      "url": "https://fred.stlouisfed.org/series/SP500",
+      "raw_sha256": "e9bcd388470935a8131bc8101271205f83ee953aecc527822e64365669b38cc2",
+      "used_dates": "2016-10-24 through 2016-10-28 only",
+      "retrieval_date": "2026-10-23",
+      "note": "Original recorded retrieval date; historical snapshot assumptions disclosed in the report."
+    },
+    {
+      "role": "frozen_vix_revision_baseline",
+      "url": "https://fred.stlouisfed.org/series/VIXCLS",
+      "raw_sha256": "c998f6faeb5a203dc65c02a70cb4f0e8955c258b4c92cd719f2ba9899137e90d",
+      "retrieval_date": "2026-10-23"
+    },
+    {
+      "role": "optional_sp_crosscheck",
+      "url": "https://fred.stlouisfed.org/series/SP500",
+      "raw_sha256": "32993507016fbeddee4dea9742c867958754c42d883f13a39ba856ed01a35eda",
+      "retrieval_date": "2026-11-06",
+      "last_observation": "2026-11-04",
+      "not_an_input": true,
+      "note": "New CSV download timed out on final day. Older snapshot retained for overlap checks, never fills official gaps."
+    }
+  ],
+  "source_policy": "D031_OPTION2_OFFICIAL_HISTORY_FIXED_PREFIX",
+  "no_raw_observations_included": true,
+  "retrieval_scope": "Receipt time is not necessarily first publication time. Historical current-vintage assumptions remain disclosed."
+}

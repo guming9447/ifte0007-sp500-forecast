@@ -1,0 +1,10 @@
+{
+  "status": "LOCAL_CANDIDATE_AWAITING_UPLOAD_APPROVAL",
+  "planned_tag": "submission-2026-11-13",
+  "tag_created": false,
+  "base_commit": "04993f1a812dc6287df0b2acc74b9daad1bb58a4",
+  "base_release": "v09",
+  "created_utc": "2026-11-13T04:23:13.453507+00:00",
+  "code_change": "Optional omission of scenario calculation/output; estimator and source policy unchanged. One additional synthetic test.",
+  "historical_metadata_note": "release_update.json and old public validation records describe the November6 foundation, not the current final release."
+}
