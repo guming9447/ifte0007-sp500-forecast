@@ -26,6 +26,27 @@ non-redistributable real inputs. It reproduces the calculation on the sample,
 not the real market result. Exact real-data replay still needs lawfully held
 matching real inputs. The ZIP's `EVIDENCE_REQUIREMENTS.md` maps all required items.
 
+## Data download links and cutoff
+
+Use only information publicly available by **13 November 2026, 12:00 London
+GMT / UTC (07:00 New York EST)**. This does not mean the whole of 13 November:
+the S&P 500 baseline is the **12 November official close**. Do not use the
+13 November cash close, later observations, or information released after the
+cutoff. For historical evaluation, apply the corresponding cutoff at each origin.
+
+| Data | Download source | Use in this project |
+|---|---|---|
+| S&P 500 official history and baseline | [S&P DJI](https://www.spglobal.com/spdji/en/indices/equity/sp-500/) - select USD, Price Return, 10 Year, Export | Official history from 31 October 2016 through 12 November 2026; 12 November close is P0. |
+| VIX historical series | [FRED VIXCLS CSV](https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS&cosd=1990-01-02&coed=2026-11-11) | Final-run historical input through 11 November 2026. |
+| VIX official daily close | [Cboe VIX_History.csv](https://cdn-api.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv) | Use the 12 November 2026 CLOSE for the baseline date; exclude later rows. |
+| S&P 500 FRED series | [FRED SP500 CSV](https://fred.stlouisfed.org/graph/fredgraph.csv?id=SP500&cosd=2016-10-24&coed=2026-11-12) | Only the five frozen sessions 24-28 October 2016 supply the old prefix; otherwise cross-check only, not a substitute for official history. |
+| VIX3M, historical rejected-factor research | [FRED VXVCLS CSV](https://fred.stlouisfed.org/graph/fredgraph.csv?id=VXVCLS&cosd=2007-01-01&coed=2026-11-12) | Historical F4 research only; not a final M1 input. |
+| E-mini S&P 500 futures, historical rejected-factor research | [Yahoo ES=F](https://finance.yahoo.com/quote/ES%3DF/) | Historical F1 hourly bars only; not a final M1 input. |
+
+Download any real observations into your own private directory, not the public
+repository. The ZIP supplies labelled permitted synthetic samples; the source
+registers identify the data used for the original calculations.
+
 ## Final forecast and original records
 
 The student-approved final forecast is **7,606.95 index points**, for the official
